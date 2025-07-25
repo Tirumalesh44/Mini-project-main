@@ -561,7 +561,8 @@ elif page_selection == "Predict New Values":
         st.subheader("Prediction Results:")
         with st.spinner('Checking battery safety with both models...'):
             try:
-                flask_api_url = "http://localhost:5000/predict"
+                # flask_api_url = "http://localhost:5000/predict"
+                flask_api_url ="https://mini-project-main-1.onrender.com/predict"
                 response = requests.post(flask_api_url, json=data_to_send)
                 response.raise_for_status()
                 
